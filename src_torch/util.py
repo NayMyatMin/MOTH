@@ -102,9 +102,9 @@ def get_dataloader(dataset, train=True, ratio=1.0, batch_size=128):
     if dataset == 'gtsrb':
         dataset = GTSRB(data_root, train, transform)
     elif dataset == 'mnist':
-        dataset = datasets.MNIST(data_root, train, transform, download=False)
+        dataset = datasets.MNIST(data_root, train, transform, download=True)
     elif dataset == 'cifar10':
-        dataset = datasets.CIFAR10(data_root, train, transform, download=False)
+        dataset = datasets.CIFAR10(data_root, train, transform, download=True)
     elif dataset == 'celeba':
         dataset = CelebA_attr(data_root, train, transform)
     else:
